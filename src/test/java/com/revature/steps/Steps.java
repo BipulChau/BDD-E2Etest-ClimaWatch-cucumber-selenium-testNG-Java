@@ -15,8 +15,8 @@ public class Steps {
         throw new io.cucumber.java.PendingException();
     }
 
-    @Then("The page should open")
-    public void the_page_should_open() {
+    @Then("The page title should be {string}")
+    public void the_page_title_should_be(String string) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
