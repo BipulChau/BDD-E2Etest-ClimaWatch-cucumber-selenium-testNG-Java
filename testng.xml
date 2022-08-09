@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test
-          name="/Users/bipulchaudhary/Revature/IntelliJ/intro-to-bdd-test-automation-framework">
-        <classes/>
+<suite name="My Test Suite">
+    <test name="My Regression Tests">
+        <classes><class name="com.revature.testRunner.TestRunner"></class></classes>
     </test>
 </suite>
