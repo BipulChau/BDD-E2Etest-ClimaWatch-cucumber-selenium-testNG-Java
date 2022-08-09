@@ -7,5 +7,4 @@ Feature: Login
     Then Sign in form should display
     When I enter correct user name "bipul513"
     And correct password "password"
-    Then I should successfully log in
-    And see the message "bipul513, Welcome to ClimaWatch !!!"
+    Then I should see the message "bipul513, Welcome to ClimaWatch !!!"

@@ -10,7 +10,7 @@ public class Steps {
     }
 
     @When("I open the page {string}")
-    public void i_open_the_page(String string) {
+    public void i_open_the_page(String url) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
@@ -34,25 +34,19 @@ public class Steps {
     }
 
     @When("I enter correct user name {string}")
-    public void i_enter_correct_user_name(String string) {
+    public void i_enter_correct_user_name(String username) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
 
     @When("correct password {string}")
-    public void correct_password(String string) {
+    public void correct_password(String password) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
 
-    @Then("I should successfully log in")
-    public void i_should_successfully_log_in() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-
-    @Then("see the message {string}")
-    public void see_the_message(String string) {
+    @Then("I should see the message {string}")
+    public void i_should_see_the_message(String message) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
