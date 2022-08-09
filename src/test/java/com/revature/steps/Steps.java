@@ -10,7 +10,7 @@ public class Steps {
     }
 
     @When("I open the page {string}")
-    public void i_open_the_page(String url) {
+    public void i_open_the_page(String string) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
@@ -33,22 +33,35 @@ public class Steps {
         throw new io.cucumber.java.PendingException();
     }
 
-    @When("I enter correct user name {string}")
-    public void i_enter_correct_user_name(String username) {
+    @When("I enter correct user name bipul513")
+    public void i_enter_correct_user_name_bipul513() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
 
-    @When("correct password {string}")
-    public void correct_password(String password) {
+    @When("correct password password")
+    public void correct_password_password() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
 
     @Then("I should see the message {string}")
-    public void i_should_see_the_message(String message) {
+    public void i_should_see_the_message(String string) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
+
+    @When("I enter correct user name kareem11")
+    public void i_enter_correct_user_name_kareem11() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @When("I enter correct user name shaquera7")
+    public void i_enter_correct_user_name_shaquera7() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
 
 }
