@@ -1,13 +1,20 @@
 package com.revature.pageObjectModel;
 
 import org.bouncycastle.crypto.agreement.srp.SRP6Client;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class HomePage {
     private WebDriver driver;
+    private WebDriverWait wdw;
 
     @FindBy(id = "city")
     private WebElement enterCityName;
@@ -48,6 +55,9 @@ public class HomePage {
     @FindBy(id = "registration_btn")
     private WebElement joinNowBtn;
 
+    @FindBy(id = "message_after_registration")
+    private WebElement messageAfterRegistration;
+
     @FindBy(id = "user_info")
     private WebElement userInfoAfterLogin;
 
@@ -65,6 +75,7 @@ public class HomePage {
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
+        this.wdw = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
     }
 
@@ -118,6 +129,11 @@ public class HomePage {
 
     public void clickJoinNowBtn(){
         joinNowBtn.click();
+    }
+
+    public String displayMessageAfterRegistration(){
+        wdw.until(ExpectedConditions.presenceOfElementLocated(By.id("message_after_registration")));
+        return messageAfterRegistration.getText();
     }
 
     public void clickAddToFavBtn(){
