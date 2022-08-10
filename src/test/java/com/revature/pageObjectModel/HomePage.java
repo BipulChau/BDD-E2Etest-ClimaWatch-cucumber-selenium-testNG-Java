@@ -1,5 +1,6 @@
 package com.revature.pageObjectModel;
 
+import org.bouncycastle.crypto.agreement.srp.SRP6Client;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -65,6 +66,66 @@ public class HomePage {
     public HomePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
+    }
+
+    public void setEnterCityName(String city){
+        enterCityName.sendKeys(city);
+    }
+
+    public void setSearchBtn(){
+        searchBtn.click();
+    }
+
+    public void setUse_current_location_btn(){
+        use_current_location_btn.click();
+    }
+
+    public void setJoinNowTab(){
+        joinNowTab.click();
+    }
+
+    public void setSignInTab(){
+        signInTab.click();
+    }
+
+    public void typeUsernameInSignInForm(String username){
+        usernameSignInForm.sendKeys(username);
+    }
+
+    public void typePasswordInSignInForm(String password){
+        passwordSignInForm.sendKeys(password);
+    }
+
+    public void clickSignInBtn(){
+        signInBtn.click();
+    }
+
+    public void typeUsernameJoinNowForm(String username){
+        usernameJoinNowForm.sendKeys(username);
+    }
+
+    public void setNameJoinForm(String name){
+        nameJoinForm.sendKeys(name);
+    }
+
+    public void typePasswordJoinForm(String password){
+        passwordJoinForm.sendKeys(password);
+    }
+
+    public void typeEmailJoinForm(String email){
+        emailJoinForm.sendKeys((email));
+    }
+
+    public void clickJoinNowBtn(){
+        joinNowBtn.click();
+    }
+
+    public void clickAddToFavBtn(){
+        addToFavBtn.click();
+    }
+
+    public void clickSignOutBtn(){
+        signOutBtn.click();
     }
 
     public WebElement getEnterCityName() {
