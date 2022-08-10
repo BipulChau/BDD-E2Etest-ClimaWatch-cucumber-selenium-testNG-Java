@@ -3,6 +3,7 @@ package com.revature.pageObjectModel;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
     private WebDriver driver;
@@ -61,5 +62,8 @@ public class HomePage {
     @FindBy(xpath = "//*[@id='add_to_fav_btn']")
     private WebElement addToFavBtn;
 
-
+public HomePage(WebDriver driver){
+    this.driver = driver;
+    PageFactory.initElements(driver, this);
+}
 }
