@@ -3,6 +3,7 @@ package com.revature.steps;
 import com.revature.pageObjectModel.HomePage;
 import io.cucumber.java.en.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -11,9 +12,12 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class Steps {
+    public WebDriver driver;
     @Given("I open the chrome browser")
     public void i_open_the_chrome_browser() {
-        Assert.assertTrue(true);
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.quit();
     }
 
     @When("I open the page {string}")
