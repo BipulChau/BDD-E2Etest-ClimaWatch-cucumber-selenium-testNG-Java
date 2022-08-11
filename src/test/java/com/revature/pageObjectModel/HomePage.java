@@ -91,12 +91,15 @@ public class HomePage {
         use_current_location_btn.click();
     }
 
-    public void setJoinNowTab(){
+    public void clickJoinNowTab(){
         joinNowTab.click();
     }
 
-    public void setSignInTab(){
+    public boolean clickSignInTab(){
         signInTab.click();
+        wdw.until(ExpectedConditions.presenceOfElementLocated(By.id("signin_form")));
+        return driver.findElement(By.id("signin_form")).isDisplayed();
+//        return  true;
     }
 
     public void typeUsernameInSignInForm(String username){

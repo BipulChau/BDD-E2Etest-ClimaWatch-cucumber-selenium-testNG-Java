@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeMethod;
 
 public class Steps {
     public WebDriver driver;
+    public HomePage homePage;
     @Given("I open the chrome browser")
     public void i_open_the_chrome_browser() {
         WebDriverManager.chromedriver().setup();
@@ -40,7 +41,14 @@ public class Steps {
 
     @When("I click on Sign in tab")
     public void i_click_on_sign_in_tab() {
-        Assert.assertTrue(true);
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.get("http://127.0.0.1:5501/index.html");
+        homePage = new HomePage(driver);
+        boolean actual = homePage.clickSignInTab();
+        Assert.assertTrue(actual);
+        driver.quit();
+
     }
 
     @Then("Sign in form should display")
