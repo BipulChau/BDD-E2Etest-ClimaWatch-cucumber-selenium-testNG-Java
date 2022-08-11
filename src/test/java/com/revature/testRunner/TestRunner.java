@@ -19,7 +19,7 @@ public class TestRunner extends AbstractTestNGCucumberTests {
     public void setup(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-
+        driver.get("http://127.0.0.1:5501/index.html");
     }
 
     @AfterMethod

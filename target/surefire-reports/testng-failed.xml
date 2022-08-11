@@ -9,7 +9,7 @@
           <include name="tearDown"/>
           <include name="setup"/>
           <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
+          <include name="runScenario" invocation-numbers="2"/>
         </methods>
       </class> <!-- com.revature.testRunner.TestRunner -->
     </classes>

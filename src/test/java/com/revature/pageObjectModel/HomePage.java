@@ -68,7 +68,7 @@ public class HomePage {
     private WebElement table;
 
     @FindBy(id = "weather_info")
-    private WebElement displayWeatherInfo;
+    private WebElement weatherInfo;
 
     @FindBy(xpath = "//*[@id='add_to_fav_btn']")
     private WebElement addToFavBtn;
@@ -83,12 +83,18 @@ public class HomePage {
         enterCityName.sendKeys(city);
     }
 
-    public void setSearchBtn(){
+    public void clickSearchBtn(){
         searchBtn.click();
     }
 
-    public void setUse_current_location_btn(){
+    public void clickUse_current_location_btn(){
+//        wdw.until(ExpectedConditions.presenceOfElementLocated(By.id("my_location")));
         use_current_location_btn.click();
+    }
+
+    public  Boolean getWeatherInfo(){
+        wdw.until(ExpectedConditions.presenceOfElementLocated(By.id("weather_info")));
+        return weatherInfo.isDisplayed();
     }
 
     public void clickJoinNowTab(){
@@ -212,10 +218,6 @@ public  WebElement getSignOutBtn(){
 
 public  WebElement getTable(){
         return table;
-}
-
-public  WebElement getDisplayWeatherInfo(){
-        return displayWeatherInfo;
 }
 
 public WebElement getAddToFavBtn(){
