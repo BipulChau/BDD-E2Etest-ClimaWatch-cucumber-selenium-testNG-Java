@@ -29,8 +29,13 @@ public class Steps {
     }
 
     @Then("The page title should be {string}")
-    public void the_page_title_should_be(String string) {
-        Assert.assertTrue(true);
+    public void the_page_title_should_be(String title) {
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.get("http://127.0.0.1:5501/index.html");
+        String actual = driver.getTitle();
+        Assert.assertEquals(actual, title);
+        driver.quit();
     }
 
     @When("I click on Sign in tab")
