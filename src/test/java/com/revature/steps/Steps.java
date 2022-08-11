@@ -22,7 +22,10 @@ public class Steps {
 
     @When("I open the page {string}")
     public void i_open_the_page(String string) {
-        Assert.assertTrue(true);
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.get(string);
+        driver.quit();
     }
 
     @Then("The page title should be {string}")
