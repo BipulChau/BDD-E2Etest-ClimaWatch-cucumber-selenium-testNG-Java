@@ -103,14 +103,17 @@ public class HomePage {
     }
 
     public void typeUsernameInSignInForm(String username){
+        wdw.until(ExpectedConditions.presenceOfElementLocated(By.id("signin_form")));
         usernameSignInForm.sendKeys(username);
     }
 
     public void typePasswordInSignInForm(String password){
+        wdw.until(ExpectedConditions.presenceOfElementLocated(By.id("signin_form")));
         passwordSignInForm.sendKeys(password);
     }
 
     public void clickSignInBtn(){
+        wdw.until(ExpectedConditions.presenceOfElementLocated(By.id("signin_form")));
         signInBtn.click();
     }
 

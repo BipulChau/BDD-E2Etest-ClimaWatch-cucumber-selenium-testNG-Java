@@ -6,8 +6,10 @@
       <class name="com.revature.testRunner.TestRunner">
         <methods>
           <include name="setUpClass"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
           <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="0 1 2"/>
+          <include name="runScenario" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.revature.testRunner.TestRunner -->
     </classes>
