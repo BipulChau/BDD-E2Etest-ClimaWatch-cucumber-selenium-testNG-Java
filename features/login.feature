@@ -30,3 +30,11 @@ Feature: Homepage
     Given I am at the home page
     When I click on Current Location
     Then I should see the weather information of the city
+
+  Scenario: Sign in
+    Given I am at the home page
+    When I click on Sign in link
+    And Type username "bipul513"
+    And Type password "password"
+    And Click sign in button
+    Then I should be logged into my profile and see my username "bipul513, Welcome to ClimaWatch !!!" in the page

@@ -208,8 +208,10 @@ public WebElement getJoinNowBtn(){
         return joinNowBtn;
 }
 
-public WebElement getUserInfoAfterLogin(){
-        return userInfoAfterLogin;
+public String getUserInfoAfterLogin() throws InterruptedException {
+    wdw.until(ExpectedConditions.presenceOfElementLocated(By.id("user_info")));
+    Thread.sleep(3000);
+    return userInfoAfterLogin.getText();
 }
 
 public  WebElement getSignOutBtn(){

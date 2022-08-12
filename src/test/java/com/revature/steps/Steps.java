@@ -64,6 +64,35 @@ public class Steps {
         homePage.clickUse_current_location_btn();
     }
 
+    @When("I click on Sign in link")
+    public void i_click_on_sign_in_link() {
+        homePage = new HomePage(TestRunner.driver);
+        homePage.clickSignInTab();
+        Assert.assertTrue(true);
+    }
+
+    @When("Type username {string}")
+    public void type_username(String username) {
+        homePage.typeUsernameInSignInForm(username);
+    }
+
+    @When("Type password {string}")
+    public void type_password(String password) {
+        homePage.typePasswordInSignInForm(password);
+    }
+
+    @When("Click sign in button")
+    public void click_sign_in_button() {
+        homePage.clickSignInBtn();
+    }
+
+    @Then("I should be logged into my profile and see my username {string} in the page")
+    public void i_should_be_logged_into_my_profile_and_see_my_username_in_the_page(String string) throws InterruptedException {
+        String actual = homePage.getUserInfoAfterLogin();
+        Assert.assertEquals(actual, string);
+    }
+
+
 
 //    @When("I click on Sign in tab")
 //    public void i_click_on_sign_in_tab() {
