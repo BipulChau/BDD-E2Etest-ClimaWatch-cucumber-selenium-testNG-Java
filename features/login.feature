@@ -1,24 +1,9 @@
-#Feature: Login
-#  Scenario: Valid Login
-#    Given I open the chrome browser
-#    When I open the page "http://127.0.0.1:5501/index.html"
-#    Then The page title should be "ClimaWatch"
-#    When I click on Sign in tab
-#    Then Sign in form should display
-#    When I enter correct user name "bipul513"
-#    And correct password  "password"
-#    Then I should see the message "Welcome to ClimaWatch !!!"
-
-
-
-
 Feature: Homepage
 
   Scenario: Page Opens
     Given I open the chrome browser
     When I open the home page
     Then The page title should be "ClimaWatch"
-
 
   Scenario: Search City
     Given I am at the home page
@@ -31,10 +16,31 @@ Feature: Homepage
     When I click on Current Location
     Then I should see the weather information of the city
 
-  Scenario: Sign in
-    Given I am at the home page
-    When I click on Sign in link
-    And Type username "bipul513"
-    And Type password "password"
-    And Click sign in button
-    Then I should be logged into my profile and see my username "bipul513, Welcome to ClimaWatch !!!" in the page
+#  Scenario: Sign in successfully
+#    Given I am at the home page
+#    When I click on Sign in link
+#    And Type username "bipul513"
+#    And Type password "password"
+#    And Click sign in button
+#    Then I should be logged into my profile and see my username "bipul513, Welcome to ClimaWatch !!!" in the page
+
+    Scenario Outline: Sign in successfully
+      Given I am at the home page
+      When I click on Sign in link
+      And Type username <username>
+      And Type password <password>
+      And Click sign in button
+      Then I should be logged into my profile and see my username <username>", Welcome to ClimaWatch !!!" in the page
+
+      Examples:
+      |username   |password  |
+      |"bipul513" |"password"|
+      |"shaquera7"|"password"|
+      |"kareem11" |"password"|
+
+
+
+
+
+
+
