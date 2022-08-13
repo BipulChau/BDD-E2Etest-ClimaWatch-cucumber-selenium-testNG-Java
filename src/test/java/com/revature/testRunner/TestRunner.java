@@ -5,6 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -18,8 +19,10 @@ public class TestRunner extends AbstractTestNGCucumberTests {
     @BeforeMethod
     public void setup(){
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.get("http://127.0.0.1:5501/index.html");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        driver = new ChromeDriver(options);
+        driver.get("http://ec2-18-116-115-64.us-east-2.compute.amazonaws.com/index.html");
     }
 
     @AfterMethod
