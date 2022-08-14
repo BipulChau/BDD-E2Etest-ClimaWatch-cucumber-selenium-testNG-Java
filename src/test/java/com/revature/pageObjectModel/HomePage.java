@@ -210,7 +210,7 @@ public WebElement getJoinNowBtn(){
 
 public String getUserInfoAfterLogin() throws InterruptedException {
     wdw.until(ExpectedConditions.presenceOfElementLocated(By.id("user_info")));
-    Thread.sleep(3000);
+    Thread.sleep(4000);
     return userInfoAfterLogin.getText();
 }
 

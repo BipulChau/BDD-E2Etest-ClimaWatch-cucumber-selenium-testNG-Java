@@ -22,7 +22,7 @@ Feature: Homepage
     And Type username <username>
     And Type password <password>
     And Click sign in button
-    Then I should be logged into my profile and see my username <username>", Welcome to ClimaWatch !!!" in the page
+    Then I should be logged into my profile and see my username <username> in the page
 
     Examples:
       | username    | password   |

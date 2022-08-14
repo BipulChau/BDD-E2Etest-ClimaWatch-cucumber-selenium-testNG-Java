@@ -86,10 +86,9 @@ public class Steps {
         Assert.assertEquals(actual, string);
     }
 
-    @Then("I should be logged into my profile and see my username {string}{string} in the page")
+    @Then("I should be logged into my profile and see my username {string}in the page")
     public void i_should_be_logged_into_my_profile_and_see_my_username_in_the_page(String string, String string2) throws InterruptedException {
         String actual = homePage.getUserInfoAfterLogin();
-        String expected = string + string2;
-        Assert.assertEquals(actual, expected);
+        Assert.assertEquals(actual, string);
     }
 }
