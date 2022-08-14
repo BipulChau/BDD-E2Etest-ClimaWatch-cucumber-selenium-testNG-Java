@@ -29,7 +29,7 @@ Feature: Homepage
       | "bipul513"  | "password" |
       | "shaquera7" | "password" |
       | "kareem11"  | "password" |
-      | "pramesh"   | "nepal123"  |
+      | "pramesh"   | "nepal123" |
 
 
 
