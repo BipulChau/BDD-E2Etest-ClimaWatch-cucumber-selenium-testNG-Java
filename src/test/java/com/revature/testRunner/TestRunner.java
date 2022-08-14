@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
 
-@CucumberOptions(glue = "com.revature.steps", features = "/Users/bipulchaudhary/Revature/IntelliJ/intro-to-bdd-test-automation-framework/features/login.feature")
+@CucumberOptions(glue = "com.revature.steps", features = "src/test/java/com/revature/resource/home.feature")
 public class TestRunner extends AbstractTestNGCucumberTests {
     public static WebDriver driver;
 
